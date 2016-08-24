@@ -1,0 +1,16 @@
+<div class="trends-widget-view-component" id="chart" #chart>
+  <!--<nvd3 [options]="options" [data]="data"></nvd3>-->
+   <svg></svg>
+   <label>Zoom: </label>
+   <button (click) = 'zoomIn()'>+</button>
+   <button (click) = 'zoomOut()'>-</button>
+   <label>Pan: </label>
+   <a (click) = 'panLeft(2)' class="nav-control pre-move"> < </a>
+   <a (click) = 'panRight(3)' class="nav-control next-move"> > </a>
+   <label>View: </label>
+   <a (click) = 'reDrawChart(2)' class="nav-control pre-move"> 2m </a>
+   <a (click) = 'reDrawChart(3)' class="nav-control next-move"> 3m </a>
+</div>
+
+
+

@@ -1,0 +1,184 @@
+{
+  "rulesDirectory": ["node_modules/codelyzer"],
+  "rules": {
+    //Requires lines to be under a certain max length.
+    "max-line-length": [true, 140],
+    //initialized to a number, string, or boolean.
+    "no-inferrable-types": true,
+    //Enforces PascalCased class and interface names.
+    "class-name": true,
+    //Enforces formatting rules for single-line comments.
+    "comment-format": [true,
+        "check-space"
+    ],
+    //Enforces indentation with tabs or spaces.
+    "indent": [true, 4],
+    //Ensures the file ends with a newline.
+    "eofline": true,
+    //Disallows duplicate variable declarations in the same block scope
+    "no-duplicate-variable": true,
+    //Disallows eval function invocations
+    "no-eval": false,
+    //Disallows use of arguments.callee
+    "no-arg": true,
+    "no-internal-module": true,
+    //Disallows trailing whitespace at the end of a line.
+    "no-trailing-whitespace": true,
+    //Disallows bitwise operators.Specifically, the following bitwise operators
+    //are banned: &, &=, |, |=, ^, ^=, <<, <<=, >>, >>=, >>>, >>>=, and ~.
+    //This rule does not ban the use of & and | for intersection and union types
+    "no-bitwise": true,
+    //Disallows shadowing variable declarations.
+    //Shadowing a variable masks access to it and obscures to what value an identifier actually refers
+    "no-shadowed-variable": true,
+    "no-unused-expression": true,
+    //Disallows unused imports, variables, functions and private class members
+    //ignore-pattern- pattern where pattern is a case-sensitive regexp.
+    // Variable names that match the pattern will be ignored
+    "no-unused-variable": [true, {"ignore-pattern": "^_"}],
+    //Requires the specified tokens to be on the same line as the expression preceding them
+    "one-line": [true,
+        "check-open-brace",
+        "check-catch",
+        "check-else",
+        "check-whitespace"
+    ],
+    //Requires single or double quotes for string literals.
+    "quotemark": [
+      true,
+      "single",
+      "avoid-escape"
+    ],
+    //Enforces consistent semicolon usage at the end of every statement.
+    "semicolon": [true, "always"],
+    "typedef-whitespace": [
+      true,
+      {
+        "call-signature": "nospace",
+        "index-signature": "nospace",
+        "parameter": "nospace",
+        "property-declaration": "nospace",
+        "variable-declaration": "nospace"
+      }
+    ],
+    //Enforces braces for if/for/do/while statements.
+    "curly": true,
+    //Enforces variable names in specified format.
+    //check-format: allows only camelCased or UPPER_CASED variable names
+    //allow-leading-underscore: allows underscores at the beginning
+    //allow-trailing-underscore: allows underscores at the end
+    //allow-pascal-case: allows PascalCase in addtion to camelCase.
+    //ban-keywords: disallows the use of certain TypeScript keywords
+    // (any, Number, number, String, string, Boolean, boolean, undefined) as variable or parameter names.
+    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"],
+    //Enforces whitespace style conventions.
+    "whitespace": [true,
+        "check-branch",
+        "check-decl",
+        "check-operator",
+        "check-separator",
+        "check-type"
+    ],
+    
+    // //Requires explicit visibility declarations for class members
+    // //check-accessor enforces explicit visibility on get/set accessors (can only be public)
+    // "member-access": [true, "check-accessor"],
+
+    //Disallows the use of require statements except in import statements.
+    //In other words, the use of forms such as var module = require("module") are banned.
+    //Instead use ES6 style imports or import foo = require('foo') imports.
+    "no-var-requires": true,
+    //Bans the use of specific functions
+    "ban": [true,
+        ["_", "extend"],
+        ["_", "isNull"],
+        ["_", "isDefined"]
+    ],     
+    //Requires a for ... in statement to be filtered with an if statement.
+    "forin": true,
+    //Disallows any type of assignment in conditionals.
+    //This applies to do-while, for, if, and while statements.
+    "no-conditional-assignment": true,
+    //Disallow the use of specified console methods
+    "no-console": [true,
+        "debug",
+        "info",
+        "time",
+        "timeEnd",
+        "trace"
+    ],
+    //Requires files to remain under a certain number of lines
+    // "max-file-line-count": [true, 300],
+
+    // Disallows invocation of require()
+    "no-require-imports": true,
+    
+    //Requires or disallows trailing commas in array and object literals, destructuring assignments and named imports.
+    "trailing-comma": [true, {"multiline": "never", "singleline": "never"}],
+    //Enforces vertical alignment.
+    "align": [true, "parameters", "statements"],
+    // //Requires parentheses around the parameters of arrow function definitions.
+    // "arrow-parens": true,
+    //Requires interface names to begin with a capital ‘I’
+    "interface-name": ["always-prefix"],
+
+    //Requires parentheses when invoking a constructor via the new keyword.
+    "new-parens": true,
+    //Disallows more than one blank line in a row.
+    "no-consecutive-blank-lines": true,
+    //Only allows labels in sensible locations.
+    //This rule only allows labels to be on do/for/while/switch statements.
+    "label-position": true,
+    //Checks that labels are defined before usage
+    "label-undefined": true,
+
+    //Enforces consistent object literal property quote style
+    // "object-literal-key-quotes": [true, "as-needed"],
+
+    //Disallows access to the constructors of String, Number, and Boolean
+    "no-construct": true,
+    //Disallows debugger statements
+    "no-debugger": true,
+    //Disallows duplicate keys in object literals
+    "no-duplicate-key": true,
+    //Disallows empty blocks.
+    //Blocks with a comment inside are not considered empty.
+    "no-empty": true,
+    //Disallows use of the null keyword literal instead use undefined
+    "no-null-keyword": true,
+    //Disallows object access via string literals
+    "no-string-literal": true,
+    //Disallows unreachable code after break, catch, throw, and return statements.
+    "no-unreachable": true,
+    //Disallows usage of variables before their declaration.
+    "no-use-before-declare": true,
+    //Disallows usage of the var keyword.
+    "no-var-keyword": true,
+    //When adding two variables, operands must both be of type number or of type string
+    //"restrict-plus-operands": true,
+    //Requires === and !== in place of == and !=.
+    "triple-equals": true,
+    //Disallows multiple variable definitions in the same declaration statement.
+    "one-variable-per-declaration": [true, "ignore-for-loop"],
+    //Requires using ECMAScript 5’s strict mode
+    "use-strict": [true,
+        "check-module",
+        "check-function"
+    ],
+    "directive-selector-name": [true, "camelCase"],
+    "directive-selector-type": [true, "attribute"],
+    "use-life-cycle-interface": true,
+    "use-pipe-transform-interface": true,
+    "component-class-suffix": true,
+    "directive-class-suffix": true,
+
+    "component-selector-name": [true, "kebab-case"],
+    "component-selector-type": [true, "element"],
+    "use-host-property-decorator": true,
+    "use-input-property-decorator": true,
+    "use-output-property-decorator": true,
+    "no-attribute-parameter-decorator": true,
+    "no-input-rename": true,
+    "no-output-rename": true
+  }
+}

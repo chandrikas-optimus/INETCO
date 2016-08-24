@@ -1,0 +1,9 @@
+.trends-widget-view-component {
+    background: white;
+}
+.nav-control {
+    cursor:pointer;
+}
+.selected {
+    color:red;
+}

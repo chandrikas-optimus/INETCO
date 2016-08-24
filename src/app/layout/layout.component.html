@@ -1,0 +1,56 @@
+<div class="i-layout-component">
+  <div class="i-layout-header">{{title}}</div>
+    <div class="i-layout-area">
+      <app-pane [paneTitle]="'Graphs'" class="col-md-8">
+        <app-trends-widget-view></app-trends-widget-view>
+      </app-pane>
+      <app-pane [paneTitle]="'Data'" class="col-md-4" >
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" (click)="click1(1)"> Bad
+          </label>
+        </div>
+        <div class="col-md-6">
+          <span>Current:</span>
+          <span></span>
+        </div>
+        <div class="col-md-6">
+          <span>Average:</span>
+          <span></span>
+        </div>
+        <div class="col-md-6">
+          <span>Maximum:</span>
+          <span></span>
+        </div>
+        <div class="col-md-6">
+          <span>Minimum:</span>
+          <span></span>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Normal
+          </label>
+        </div>
+        <div class="col-md-6">
+          <span>Current:</span>
+          <span></span>
+        </div>
+        <div class="col-md-6">
+          <span>Average:</span>
+          <span></span>
+        </div>
+        <div class="col-md-6">
+          <span>Maximum:</span>
+          <span></span>
+        </div>
+        <div class="col-md-6">
+          <span>Minimum:</span>
+          <span></span>
+        </div>
+      </app-pane>
+    </div>
+</div>
+

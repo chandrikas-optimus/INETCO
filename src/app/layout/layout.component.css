@@ -1,0 +1,18 @@
+.i-layout-header {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#008C9E), to(#151F20));
+    background-image: -webkit-linear-gradient(top, #008C9E, #151F20);
+    background-image: -moz-linear-gradient(top, #008C9E, #151F20);
+    background-image: linear-gradient(to bottom, #008C9E, #151F20);
+    color: snow;
+    height: 40px;
+    font-size: x-large;
+    margin-bottom: 1em;
+}
+
+.i-layout-component {
+    height: 100%;
+}
+
+.i-layout-area {
+    height: 100%;
+}
